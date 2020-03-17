@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   StyleProp,
   ViewStyle,
+  Dimensions,
 } from 'react-native'
 import { IMessage, Reply } from './types'
 import Color from './Color'
@@ -16,7 +17,10 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    maxWidth: 300,
+    // maxWidth: 300,
+    width: Dimensions.get('window').width,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   quickReply: {
     justifyContent: 'center',
